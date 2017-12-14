@@ -33,7 +33,7 @@ export class AppComponent extends React.Component<{}, AppState> {
         })
 
         socket.on('image.error', (args: any) => {
-            alert(args.message.json.message)
+            alert(args.message.code)
         })
     }
 

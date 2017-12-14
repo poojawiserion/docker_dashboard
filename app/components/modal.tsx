@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as $ from 'jquery'
 
 interface ModalProperties {
     id: string
@@ -19,7 +20,8 @@ export default class Modal extends React.Component<ModalProperties, {}> {
     onPrimaryButtonClick() {
         if (this.props.onButtonClicked) {
             if (this.props.onButtonClicked() !== false) {
-                $(this.modalElementId).modal('hide')
+                console.log("modalElementId", this.modalElementId)
+                // $(this.modalElementId).modal('hide')
             }
         }
     }
